@@ -58,14 +58,17 @@ function Home() {
           {trending.map((movie) => (
             <MovieCard
               key={movie.id}
-              title={movie.title}
-              rating={movie.rating}
-              poster={movie.poster}
+              movie={movie}
             />
           ))}
         </div>
 
-        <h2 style={{ color: "white", marginTop: "40px" }}>
+        <h2
+          style={{
+            color: "white",
+            marginTop: "40px",
+          }}
+        >
           Top Rated
         </h2>
 
@@ -80,9 +83,7 @@ function Home() {
           {trending.map((movie) => (
             <MovieCard
               key={movie.id + 10}
-              title={movie.title}
-              rating={movie.rating}
-              poster={movie.poster}
+              movie={movie}
             />
           ))}
         </div>

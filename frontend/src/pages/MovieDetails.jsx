@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 function MovieDetails() {
   return (
@@ -27,7 +28,19 @@ function MovieDetails() {
 
         <h3>⭐ Rating: 8.6</h3>
 
-        <button>▶ Play Trailer</button>
+        <Link to="/booking/1">
+          <button
+            style={{
+              padding: "12px 25px",
+              backgroundColor: "#E50914",
+              color: "white",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            Book Now
+          </button>
+        </Link>
       </div>
     </div>
   );
