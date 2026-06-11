@@ -1,27 +1,22 @@
-function MovieCard({ title, rating, poster }) {
+import React from "react";
+import { Link } from "react-router-dom";
+
+export default function MovieCard({ movie }) {
+  if (!movie) return null;
+
   return (
-    <div
-      style={{
-        width: "220px",
-        backgroundColor: "#222",
-        borderRadius: "10px",
-        overflow: "hidden",
-        transition: "0.3s",
-      }}
-    >
+    <div className="card">
       <img
-        src={poster}
-        alt={title}
-        width="100%"
-        height="300"
+        src={movie.poster}
+        alt={movie.title}
+        style={{ width: "100%", height: "250px", objectFit: "cover" }}
       />
 
-      <div style={{ padding: "10px", color: "white" }}>
-        <h3>{title}</h3>
-        <p>⭐ {rating}</p>
-      </div>
+      <h3>{movie.title}</h3>
+
+      <Link to={`/movie/${movie._id}`}>
+        <button>View Details</button>
+      </Link>
     </div>
   );
 }
-
-export default MovieCard;
