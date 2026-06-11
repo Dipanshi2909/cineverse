@@ -26,7 +26,7 @@ function MovieDetails() {
           attempt to ensure humanity's survival.
         </p>
 
-        <h3>⭐ Rating: 8.6</h3>
+        <h3>Rating: 8.6</h3>
 
         <Link to="/booking/1">
           <button
@@ -36,6 +36,7 @@ function MovieDetails() {
               color: "white",
               border: "none",
               cursor: "pointer",
+              borderRadius: "5px",
             }}
           >
             Book Now
