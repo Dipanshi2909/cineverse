@@ -56,9 +56,7 @@ function MovieCatalog() {
           {movies.map((movie) => (
             <MovieCard
               key={movie.id}
-              title={movie.title}
-              rating={movie.rating}
-              poster={movie.poster}
+              movie={movie}
             />
           ))}
         </div>
