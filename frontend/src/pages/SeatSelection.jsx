@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 function SeatSelection() {
@@ -85,18 +86,20 @@ function SeatSelection() {
 
         <h2>Total Price: ₹{totalPrice}</h2>
 
-        <button
-          style={{
-            padding: "12px 25px",
-            backgroundColor: "#E50914",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
-        >
-          Proceed to Payment
-        </button>
+        <Link to="/payment">
+          <button
+            style={{
+              padding: "12px 25px",
+              backgroundColor: "#E50914",
+              color: "white",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+            }}
+          >
+            Proceed to Payment
+          </button>
+        </Link>
       </div>
     </div>
   );

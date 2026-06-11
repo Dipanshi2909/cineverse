@@ -6,6 +6,8 @@ import MovieDetails from "./pages/MovieDetails";
 import Watchlist from "./pages/Watchlist";
 import Booking from "./pages/Booking";
 import SeatSelection from "./pages/SeatSelection";
+import Payment from "./pages/Payment";
+import Confirmation from "./pages/Confirmation";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/booking/:id" element={<Booking />} />
         <Route path="/seats/:id" element={<SeatSelection />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
     </BrowserRouter>
   );
