@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 function Dashboard() {
@@ -14,11 +15,24 @@ function Dashboard() {
       <div style={{ padding: "40px" }}>
         <h1>Welcome to CineVerse</h1>
 
-        <h2>Total Movies: 500+</h2>
+        <h3>Total Movies: 500+</h3>
+        <h3>Bookings Made: 12</h3>
+        <h3>Watchlist Movies: 8</h3>
 
-        <h2>Active Bookings: 12</h2>
-
-        <h2>Watchlist Items: 8</h2>
+        <Link to="/home">
+          <button
+            style={{
+              marginTop: "20px",
+              padding: "12px 25px",
+              backgroundColor: "#E50914",
+              color: "white",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            Enter CineVerse
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
@@ -25,7 +25,9 @@ function Login() {
           width: "350px",
         }}
       >
-        <h1 style={{ color: "white" }}>Login</h1>
+        <h1 style={{ color: "white", textAlign: "center" }}>
+          CineVerse Login
+        </h1>
 
         <input
           type="email"
@@ -33,6 +35,7 @@ function Login() {
           style={{
             width: "100%",
             padding: "12px",
+            marginTop: "20px",
             marginBottom: "10px",
           }}
         />
@@ -55,12 +58,19 @@ function Login() {
             backgroundColor: "#E50914",
             color: "white",
             border: "none",
+            cursor: "pointer",
           }}
         >
           Login
         </button>
 
-        <p style={{ color: "white", marginTop: "15px" }}>
+        <p
+          style={{
+            color: "white",
+            marginTop: "15px",
+            textAlign: "center",
+          }}
+        >
           New User? <Link to="/signup">Sign Up</Link>
         </p>
       </div>

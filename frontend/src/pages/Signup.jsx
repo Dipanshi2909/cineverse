@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
+
+  const handleSignup = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div
       style={{
@@ -19,7 +25,9 @@ function Signup() {
           width: "350px",
         }}
       >
-        <h1 style={{ color: "white" }}>Sign Up</h1>
+        <h1 style={{ color: "white", textAlign: "center" }}>
+          Create Account
+        </h1>
 
         <input
           type="text"
@@ -27,6 +35,7 @@ function Signup() {
           style={{
             width: "100%",
             padding: "12px",
+            marginTop: "20px",
             marginBottom: "10px",
           }}
         />
@@ -52,18 +61,26 @@ function Signup() {
         />
 
         <button
+          onClick={handleSignup}
           style={{
             width: "100%",
             padding: "12px",
             backgroundColor: "#E50914",
             color: "white",
             border: "none",
+            cursor: "pointer",
           }}
         >
-          Create Account
+          Sign Up
         </button>
 
-        <p style={{ color: "white", marginTop: "15px" }}>
+        <p
+          style={{
+            color: "white",
+            marginTop: "15px",
+            textAlign: "center",
+          }}
+        >
           Already have an account? <Link to="/">Login</Link>
         </p>
       </div>
