@@ -2,20 +2,24 @@ function MovieCard({ title, rating }) {
   return (
     <div
       style={{
-        border: "1px solid #ccc",
+        width: "220px",
+        margin: "15px",
+        background: "#222",
+        color: "white",
         borderRadius: "10px",
-        padding: "15px",
-        width: "200px",
-        margin: "10px"
+        overflow: "hidden",
       }}
     >
       <img
-        src="https://via.placeholder.com/200x250"
+        src="https://via.placeholder.com/220x300"
         alt={title}
+        width="100%"
       />
 
-      <h3>{title}</h3>
-      <p>⭐ {rating}</p>
+      <div style={{ padding: "10px" }}>
+        <h3>{title}</h3>
+        <p>⭐ {rating}</p>
+      </div>
     </div>
   );
 }

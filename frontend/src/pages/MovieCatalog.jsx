@@ -1,25 +1,26 @@
-import MovieCard from "../components/MovieCard";
-
-function MovieCatalog() {
-  const movies = [
-    { id: 1, title: "Interstellar", rating: 8.6 },
-    { id: 2, title: "Inception", rating: 8.8 },
-    { id: 3, title: "Avengers Endgame", rating: 8.4 }
-  ];
-
+function MovieCard({ title, rating }) {
   return (
-    <div>
-      <h1>Movie Catalog</h1>
+    <div
+      style={{
+        width: "220px",
+        backgroundColor: "#222",
+        borderRadius: "10px",
+        overflow: "hidden",
+        cursor: "pointer",
+      }}
+    >
+      <img
+        src="https://via.placeholder.com/220x300"
+        alt={title}
+        width="100%"
+      />
 
-      {movies.map((movie) => (
-        <MovieCard
-          key={movie.id}
-          title={movie.title}
-          rating={movie.rating}
-        />
-      ))}
+      <div style={{ padding: "10px" }}>
+        <h3>{title}</h3>
+        <p>⭐ {rating}</p>
+      </div>
     </div>
   );
 }
 
-export default MovieCatalog;
+export default MovieCard;

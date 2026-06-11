@@ -1,33 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
 import MovieCatalog from "./pages/MovieCatalog";
-import ProtectedRoute from "./routes/ProtectedRoute";
+import Watchlist from "./pages/Watchlist";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/movies"
-          element={
-            <ProtectedRoute>
-              <MovieCatalog />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<MovieCatalog />} />
+        <Route path="/watchlist" element={<Watchlist />} />
       </Routes>
     </BrowserRouter>
   );
