@@ -1,36 +1,26 @@
-import { Link } from "react-router-dom";
-
 function MovieCard({ title, rating, poster }) {
   return (
-    <Link
-      to="/movie/1"
+    <div
       style={{
-        textDecoration: "none",
-        color: "inherit",
+        width: "220px",
+        backgroundColor: "#222",
+        borderRadius: "10px",
+        overflow: "hidden",
+        transition: "0.3s",
       }}
     >
-      <div
-        style={{
-          width: "220px",
-          backgroundColor: "#222",
-          borderRadius: "10px",
-          overflow: "hidden",
-          transition: "0.3s",
-        }}
-      >
-        <img
-          src={poster}
-          alt={title}
-          width="100%"
-          height="300"
-        />
+      <img
+        src={poster}
+        alt={title}
+        width="100%"
+        height="300"
+      />
 
-        <div style={{ padding: "10px", color: "white" }}>
-          <h3>{title}</h3>
-          <p>⭐ {rating}</p>
-        </div>
+      <div style={{ padding: "10px", color: "white" }}>
+        <h3>{title}</h3>
+        <p>⭐ {rating}</p>
       </div>
-    </Link>
+    </div>
   );
 }
 
