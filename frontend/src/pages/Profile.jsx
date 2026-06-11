@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 
-function Dashboard() {
+function Profile() {
   return (
     <div
       style={{
@@ -12,16 +12,18 @@ function Dashboard() {
       <Navbar />
 
       <div style={{ padding: "40px" }}>
-        <h1>Welcome to CineVerse</h1>
+        <h1>User Profile</h1>
 
-        <h2>Total Movies: 500+</h2>
+        <h3>Name: Deepanshi Sharma</h3>
 
-        <h2>Active Bookings: 12</h2>
+        <h3>Email: user@example.com</h3>
 
-        <h2>Watchlist Items: 8</h2>
+        <h3>Total Bookings: 12</h3>
+
+        <h3>Watchlist Movies: 8</h3>
       </div>
     </div>
   );
 }
 
-export default Dashboard;
+export default Profile;

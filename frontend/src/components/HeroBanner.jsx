@@ -1,5 +1,3 @@
-import React from "react";
-
 function HeroBanner() {
   return (
     <div
@@ -9,44 +7,38 @@ function HeroBanner() {
           "url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        color: "white",
         display: "flex",
         alignItems: "center",
-        padding: "0 50px",
+        padding: "50px",
+        color: "white",
       }}
     >
       <div>
-        <h1 style={{ fontSize: "4rem", marginBottom: "10px" }}>
-          Interstellar
-        </h1>
+        <h1 style={{ fontSize: "4rem" }}>CineVerse Originals</h1>
 
-        <p
-          style={{
-            width: "500px",
-            fontSize: "18px",
-            marginBottom: "20px",
-          }}
-        >
-          A team of explorers travel through a wormhole in space in an attempt
-          to ensure humanity's survival.
+        <p style={{ maxWidth: "600px" }}>
+          Watch trending movies, book tickets and explore cinema like never
+          before.
         </p>
 
         <button
           style={{
-            padding: "10px 25px",
+            padding: "12px 25px",
+            backgroundColor: "#E50914",
+            color: "white",
+            border: "none",
             marginRight: "10px",
-            fontSize: "16px",
-            cursor: "pointer",
           }}
         >
-          ▶ Play
+          Play
         </button>
 
         <button
           style={{
-            padding: "10px 25px",
-            fontSize: "16px",
-            cursor: "pointer",
+            padding: "12px 25px",
+            backgroundColor: "#444",
+            color: "white",
+            border: "none",
           }}
         >
           More Info

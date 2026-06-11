@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
 
-export default function MovieCard({ movie }) {
+function MovieCard({ movie }) {
   return (
     <div
       style={{
         width: "220px",
-        backgroundColor: "#222",
-        borderRadius: "10px",
-        overflow: "hidden",
-        color: "white",
+        transition: "0.3s",
       }}
     >
       <img
@@ -16,29 +13,33 @@ export default function MovieCard({ movie }) {
         alt={movie.title}
         style={{
           width: "100%",
-          height: "300px",
+          height: "320px",
           objectFit: "cover",
+          borderRadius: "10px",
         }}
       />
 
-      <div style={{ padding: "10px" }}>
-        <h3>{movie.title}</h3>
-        <p>⭐ {movie.rating}</p>
+      <h3 style={{ color: "white" }}>{movie.title}</h3>
 
-        <Link to={`/movie/${movie.id}`}>
-          <button
-            style={{
-              padding: "8px 12px",
-              backgroundColor: "#E50914",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            View Details
-          </button>
-        </Link>
-      </div>
+      <p style={{ color: "white" }}>
+        Rating: {movie.rating}
+      </p>
+
+      <Link to={`/movie/${movie.id}`}>
+        <button
+          style={{
+            backgroundColor: "#E50914",
+            color: "white",
+            border: "none",
+            padding: "10px",
+            cursor: "pointer",
+          }}
+        >
+          View Details
+        </button>
+      </Link>
     </div>
   );
 }
+
+export default MovieCard;

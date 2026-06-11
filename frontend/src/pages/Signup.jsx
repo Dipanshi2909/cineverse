@@ -1,12 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Login() {
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    navigate("/dashboard");
-  };
-
+function Signup() {
   return (
     <div
       style={{
@@ -25,7 +19,17 @@ function Login() {
           width: "350px",
         }}
       >
-        <h1 style={{ color: "white" }}>Login</h1>
+        <h1 style={{ color: "white" }}>Sign Up</h1>
+
+        <input
+          type="text"
+          placeholder="Full Name"
+          style={{
+            width: "100%",
+            padding: "12px",
+            marginBottom: "10px",
+          }}
+        />
 
         <input
           type="email"
@@ -48,7 +52,6 @@ function Login() {
         />
 
         <button
-          onClick={handleLogin}
           style={{
             width: "100%",
             padding: "12px",
@@ -57,15 +60,15 @@ function Login() {
             border: "none",
           }}
         >
-          Login
+          Create Account
         </button>
 
         <p style={{ color: "white", marginTop: "15px" }}>
-          New User? <Link to="/signup">Sign Up</Link>
+          Already have an account? <Link to="/">Login</Link>
         </p>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Signup;
