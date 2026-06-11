@@ -1,22 +1,22 @@
-function MovieCard({ title, rating }) {
+function MovieCard({ title, rating, poster }) {
   return (
     <div
       style={{
         width: "220px",
-        margin: "15px",
-        background: "#222",
-        color: "white",
+        backgroundColor: "#222",
         borderRadius: "10px",
         overflow: "hidden",
+        transition: "0.3s",
       }}
     >
       <img
-        src="https://via.placeholder.com/220x300"
+        src={poster}
         alt={title}
         width="100%"
+        height="300"
       />
 
-      <div style={{ padding: "10px" }}>
+      <div style={{ padding: "10px", color: "white" }}>
         <h3>{title}</h3>
         <p>⭐ {rating}</p>
       </div>

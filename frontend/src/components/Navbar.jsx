@@ -5,7 +5,6 @@ function Navbar() {
     <nav
       style={{
         backgroundColor: "#141414",
-        color: "white",
         padding: "15px 40px",
         display: "flex",
         justifyContent: "space-between",
@@ -14,10 +13,27 @@ function Navbar() {
     >
       <h2 style={{ color: "#E50914" }}>CineVerse</h2>
 
-      <div style={{ display: "flex", gap: "20px" }}>
-        <Link to="/" style={{ color: "white" }}>Home</Link>
-        <Link to="/movies" style={{ color: "white" }}>Movies</Link>
-        <Link to="/watchlist" style={{ color: "white" }}>Watchlist</Link>
+      <div style={{ display: "flex", gap: "25px" }}>
+        <Link
+          to="/"
+          style={{ color: "white", textDecoration: "none" }}
+        >
+          Home
+        </Link>
+
+        <Link
+          to="/movies"
+          style={{ color: "white", textDecoration: "none" }}
+        >
+          Movies
+        </Link>
+
+        <Link
+          to="/watchlist"
+          style={{ color: "white", textDecoration: "none" }}
+        >
+          Watchlist
+        </Link>
       </div>
     </nav>
   );
